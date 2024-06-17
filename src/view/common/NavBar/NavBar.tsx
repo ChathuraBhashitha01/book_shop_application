@@ -4,7 +4,7 @@ import icon from '../../../images/creative-abstract-book-feather-logo-design-vec
 export class NavBar extends Component {
     render() {
         return (
-            <div className="p-2 flex border-black border-[1px] bg-[#6b6464]">
+            <div className="p-2 flex border-black border-[1px] bg-[#444544]">
                 <img className="h-5 w-5 ml-1 mt-1 mr-1" src={icon} alt=""/>
 
                 <h1 className="text-1x1 text-black text-lg font-bold">
