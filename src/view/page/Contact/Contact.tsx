@@ -5,7 +5,7 @@ export class Contact extends Component {
     render() {
         return (
             <div>
-                <div className="h-[88.3vh]">
+                <div className="h-[85vh]">
                     <img src={icon} alt="" className="h-[30vh] w-[100vw] filter brightness-150 opacity-40"/>
                     <div className="flex">
                         <div className="w-[30vw] h-auto pt-2 pl-10 mx-auto">
