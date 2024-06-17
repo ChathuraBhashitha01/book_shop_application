@@ -1,14 +1,14 @@
 import {Component} from "react";
 import {NavBar} from "../NavBar/NavBar";
 import {Footer} from "../Footer/Footer";
-import {Home} from "../../page/Home/Home";
+import {MainContent} from "../MainContent/MainContent";
 
 export class DefaultLayout extends Component {
     render() {
         return (
             <div className="w-[100vw] h-[100vh]">
                 <NavBar></NavBar>
-                <Home></Home>
+                <MainContent></MainContent>
                 <Footer></Footer>
             </div>
         );

@@ -1,5 +1,6 @@
 import {Component} from "react";
 import icon from '../../../images/creative-abstract-book-feather-logo-design-vector.jpg';
+import {Link} from "react-router-dom";
 
 export class NavBar extends Component {
     render() {
@@ -13,10 +14,10 @@ export class NavBar extends Component {
 
                 <ul className="list-none ml-[100px] pl-[350px] ">
                     <li className="inline-block mr-2 text-black cursor-pointer hover:text-white pl-[20px]">
-                        Home
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="inline-block mr-2 text-black cursor-pointer hover:text-white pl-[20px]">
-                        About
+                        <Link to="/about">About</Link>
                     </li>
                     <li className="inline-block mr-2 text-black cursor-pointer hover:text-white pl-[20px]">
                         Contact
