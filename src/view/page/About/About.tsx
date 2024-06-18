@@ -6,7 +6,7 @@ export class About extends Component {
         return (
             <div className="h-[85vh] relative">
                 <img src={icon} alt="" className="h-[30vh] w-[100vw] filter brightness-150 opacity-40"/>
-                <div className="w-[50%] h-auto absolute top-5 bottom-0 left-0 right-0 mx-auto  pt-5 pl-10 pr-10 border-[1px] border-black">
+                <div className="w-[50%] h-auto absolute top-5 left-0 right-0 mx-auto  pt-5 pl-10 pr-10 border-[1px] border-black">
                     <h2 className="pb-3 text-3xl text-black underline decoration-2">About Us</h2>
                     <p className="pb-3  text-[15px]">
                         Bookshop.org is an online bookshop with a mission to financially support local, independent
