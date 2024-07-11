@@ -25,7 +25,7 @@ export const  UserNavBar=()=> {
     };
     return (
         <div>
-            <header className="bg-blue-600 shadow-md h-15">
+            <header className="bg-blue-600 shadow-md h-18">
                 <div className="flex justify-between items-center max-w-6xl mx-auto">
                     <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
                         <samp className="text-white">MyBook</samp>

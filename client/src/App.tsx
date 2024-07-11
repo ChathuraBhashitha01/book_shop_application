@@ -17,7 +17,6 @@ function App() {
                 <Route path="/login" Component={Login}/>
                 <Route path="/signup" Component={Signup}/>
                 <Route path="/user" Component={UserLayout}/>
-                <Route path="/bookAddForm" Component={BookAddingForm}/>
                 <Route path="/nav" Component={UserNavBar}/>
             </Routes>
         </BrowserRouter>
