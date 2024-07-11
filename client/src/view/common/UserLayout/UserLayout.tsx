@@ -1,6 +1,7 @@
 import {Component} from "react";
 import {UserNavBar} from "../UserNavBar/UserNavBar";
 import {UserContent} from "../UserContent/UserContent";
+import {SideBar} from "../SideBar";
 
 
 export class UserLayout extends Component {
@@ -8,6 +9,7 @@ export class UserLayout extends Component {
         return (
             <div className="w-[100vw] h-[100vh]">
                 <UserNavBar/>
+                <SideBar/>
                 <UserContent/>
             </div>
         );
