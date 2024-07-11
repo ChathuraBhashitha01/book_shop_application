@@ -7,7 +7,7 @@ export class UserContent extends Component {
         return (
             <>
                 <Routes>
-                    <Route path="/bookAddForm" Component={BookAddingForm} />
+                    <Route path="/" Component={BookAddingForm} />
                 </Routes>
             </>
         );

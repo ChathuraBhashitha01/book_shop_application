@@ -26,7 +26,7 @@ export const Signup = () => {
                     <img src={icon} alt="" className="w-[100%] h-[100%]"/>
                 </div>
                 <div className="w-[30vw] h-[100%] relative inline-block border-black border-[1px]">
-                    <div className="w-[100%] h-[30vh] mt-4 mb-4 pl-9 pr-9 absolute bottom-0 top-[30vh] right-0 mx-auto ">
+                    <div className="w-[100%] h-[30vh] mt-4 mb-4 pl-9 pr-9 absolute bottom-0 top-[20vh] right-0 mx-auto ">
                         <h1 className="text-3xl text-center font-semibold my-7">SignUp</h1>
                         <form onSubmit={handleAuth} className="flex flex-col gap-4">
                             <input type="text" placeholder="username" className="border p-3 rounded-lg" id='username'

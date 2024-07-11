@@ -13,47 +13,36 @@ export class BookAddingForm extends Component {
                     noValidate
                     autoComplete="off"
                 >
-                    <div>
+                    <div className="flex flex-col">
                         <TextField
                             required
                             id="outlined-required"
-                            label="Required"
-                            defaultValue="Hello World"
-                        />
-                        <TextField
-                            disabled
-                            id="outlined-disabled"
-                            label="Disabled"
-                            defaultValue="Hello World"
+                            label="Name"
+                            className="w-24"
                         />
                         <TextField
                             id="outlined-password-input"
                             label="Password"
-                            type="password"
+                            type="text"
                             autoComplete="current-password"
                         />
                         <TextField
-                            id="outlined-read-only-input"
-                            label="Read Only"
-                            defaultValue="Hello World"
-                            InputProps={{
-                                readOnly: true,
-                            }}
+                            id="outlined-password-input"
+                            label="Password"
+                            type="text"
+                            autoComplete="current-password"
                         />
                         <TextField
-                            id="outlined-number"
-                            label="Number"
-                            type="number"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
+                            id="outlined-password-input"
+                            label="Password"
+                            type="text"
+                            autoComplete="current-password"
                         />
-                        <TextField id="outlined-search" label="Search field" type="search" />
                         <TextField
-                            id="outlined-helperText"
-                            label="Helper text"
-                            defaultValue="Default Value"
-                            helperText="Some important text"
+                            id="outlined-password-input"
+                            label="Password"
+                            type="text"
+                            autoComplete="current-password"
                         />
                     </div>
                 </Box>
