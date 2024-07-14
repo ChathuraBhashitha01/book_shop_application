@@ -1,7 +1,10 @@
 import {Component} from "react";
-import {Box, FormControl, InputLabel, Select, TextField, Button,Stack} from "@mui/material";
+import {Box, FormControl, InputLabel, Select, TextField, Button, Stack, Card} from "@mui/material";
 import {MenuItem} from "react-pro-sidebar";
-import * as timers from "node:timers";
+
+interface BookProps {
+    data: any
+}
 
 interface BookAddState {
     name: string;
@@ -14,88 +17,50 @@ interface BookAddState {
     picture:string;
 }
 
-export class BookAddingForm extends Component {
-    constructor(props: {}) {
+export class BookAddingForm extends Component<BookProps,BookAddState> {
+
+    constructor(props: any) {
         super(props);
+
         this.state = {
-            selectedFile: null,
-            preview: null,
-        };
+            name: '',
+            des:'',
+            author:'',
+            supplier:'',
+            qty:0,
+            buyPrice:0,
+            salePrice:0,
+            picture:''
+        }
     }
 
-    handleFileChange = (event: { target: { files: any[]; }; }) => {
-        const file = event.target.files[0];
-        this.setState({
-            selectedFile: file
-        });
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                this.setState({
-                    preview: reader.result
-                });
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
-    handleSubmit = (event: { preventDefault: () => void; }) => {
-        event.preventDefault();
-    };
-
     render() {
-        // @ts-ignore
         return (
             <div>
-                <Box
-                    component="form"
-                    sx={{
-                        '& .MuiTextField-root': { m: 2, width: '30ch' },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                >
-                    <div>
-                        <TextField
-                            required
-                            id="txtName"
-                            label="Name"
-                        />
-                        <TextField
-                            id="txtAuthor"
-                            label="Author"
-                            type="text"
-                        />
-                        <TextField
-                            id="txtBuyPrice"
-                            label="Buy Price"
-                            type="number"
-                        />
-                        <TextField
-                            id="txtSalePrice"
-                            label="Sale Price"
-                            type="number"
-                        />
-                        <TextField
-                            id="txtQuantity"
-                            label="Quantity"
-                            type="number"
-                        />
-                        <FormControl sx={{ m: 3, minWidth: 240 }}>
-                            <InputLabel id="bookCategory">Category</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                label="Age"
+                <form  className='flex flex-col w-[50%] mt-5 ml-4 gap-2'>
+                    <TextField id="txtName" label="Name" variant="standard" required={true} type="text" value={this.state.name}/>
+                    <TextField id="txtAuther" label="Author" variant="standard" type="text" value={this.state.author} />
+                    <TextField id="txtSupplier" label="Supplier" variant="standard" type="text" value={this.state.supplier} />
+                    <TextField id="txtBuyPrice" label="Buy Price" variant="standard" type="number" value={this.state.buyPrice} />
+                    <TextField id="txtSalePrice" label="Sale Price" variant="standard" type="number" value={this.state.salePrice} />
+                    <TextField id="txtQty" label="Quantity" variant="standard" type="number" value={this.state.qty} />
 
-                            >
-                                <MenuItem >Ten</MenuItem>
-                                <MenuItem >Twenty</MenuItem>
-                                <MenuItem >Thirty</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                </Box>
+
+                    <FormControl sx={{ m: 3, minWidth: 240 }}>
+                        <InputLabel id="bookCategory">Category</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            label="Age"
+                            className='mt-6 w-[70%]'
+
+                        >
+                            <MenuItem >Ten</MenuItem>
+                            <MenuItem >Twenty</MenuItem>
+                            <MenuItem >Thirty</MenuItem>
+                        </Select>
+                    </FormControl>
+                </form>
                 <form className="w-[90%] ml-5 mt-5">
                     <TextField
                         id="outlined-password-input"
@@ -104,19 +69,6 @@ export class BookAddingForm extends Component {
                         className="w-[100%] "
                     />
                 </form>
-                {/*<div>*/}
-                {/*    <form onSubmit={this.handleSubmit}>*/}
-                {/*        <input type="file" onChange={this.handleFileChange}/>*/}
-                {/*        <Button  variant="contained" type="submit">upload</Button>*/}
-                {/*    </form>*/}
-                {/*    {this.state.preview && (*/}
-                {/*        <div>*/}
-                {/*            <h3>Image Preview:</h3>*/}
-                {/*            <img src={this.state.preview} alt="Preview" style={{ width: '200px' }} />*/}
-                {/*        </div>*/}
-                {/*    )}*/}
-                {/*</div>*/}
-
             </div>
         );
     }

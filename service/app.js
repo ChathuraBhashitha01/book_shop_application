@@ -9,7 +9,8 @@ DBConnection();
 
 
 var usersRouter = require('./routes/users');
-var saveBook = require('./routes/SaveBook');
+var bookRouter = require('./routes/BookRoutes');
+var authRouter = require('./routes/authRoutes');
 
 var app = express();
 
@@ -23,8 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/v1/books',bookRouter);
+app.use('/api/v1/auth',authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
