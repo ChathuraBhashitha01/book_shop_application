@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service/controller/BookController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/model/Book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/routes/BookRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/controller/SaveBookController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/routes/SaveBook.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/routes/authRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +109,7 @@
       <workItem from="1720771431480" duration="17000" />
       <workItem from="1720801542708" duration="1169000" />
       <workItem from="1720970403701" duration="282000" />
-      <workItem from="1720975832741" duration="4176000" />
+      <workItem from="1720975832741" duration="8663000" />
     </task>
     <servers />
   </component>

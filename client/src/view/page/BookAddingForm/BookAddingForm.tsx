@@ -1,6 +1,6 @@
 import {Component} from "react";
-import {Box, FormControl, InputLabel, Select, TextField, Button, Stack, Card} from "@mui/material";
-import {MenuItem} from "react-pro-sidebar";
+import {FormControl, InputLabel, Select, TextField, MenuItem} from "@mui/material";
+
 
 interface BookProps {
     data: any
@@ -9,6 +9,7 @@ interface BookProps {
 interface BookAddState {
     name: string;
     des:string;
+    category:string;
     qty: number;
     buyPrice: number;
     salePrice:number;
@@ -24,50 +25,61 @@ export class BookAddingForm extends Component<BookProps,BookAddState> {
 
         this.state = {
             name: '',
-            des:'',
-            author:'',
-            supplier:'',
+            des: '',
+            category: '',
+            author: '',
+            supplier: '',
             qty:0,
-            buyPrice:0,
-            salePrice:0,
-            picture:''
+            buyPrice: 0,
+            salePrice: 0,
+            picture: ''
         }
+    }
+
+    private handleInputOnChange = (event: { target: { name: any, value: any } }) => {
+        const {name, value} = event.target;
+
+        // @ts-ignore
+        this.setState({
+            [name]: value
+        });
+        console.log(this.state)
+    }
+
+    private handleOnSubmit = (event: { preventDefault: () => void; }) =>{
+        event.preventDefault();
     }
 
     render() {
         return (
             <div>
-                <form  className='flex flex-col w-[50%] mt-5 ml-4 gap-2'>
-                    <TextField id="txtName" label="Name" variant="standard" required={true} type="text" value={this.state.name}/>
-                    <TextField id="txtAuther" label="Author" variant="standard" type="text" value={this.state.author} />
-                    <TextField id="txtSupplier" label="Supplier" variant="standard" type="text" value={this.state.supplier} />
-                    <TextField id="txtBuyPrice" label="Buy Price" variant="standard" type="number" value={this.state.buyPrice} />
-                    <TextField id="txtSalePrice" label="Sale Price" variant="standard" type="number" value={this.state.salePrice} />
-                    <TextField id="txtQty" label="Quantity" variant="standard" type="number" value={this.state.qty} />
+                <form  className='flex flex-col w-[50%] mt-20 ml-4' onSubmit={this.handleOnSubmit}>
+                    <TextField label="Name" variant="filled" required={true} type="text" name='name' value={this.state.name} onChange={this.handleInputOnChange}/>
+                    <TextField label="Author" variant="filled" type="text" name='author' value={this.state.author} onChange={this.handleInputOnChange} />
+                    <TextField label="Supplier" variant="filled" type="text" name='supplier' value={this.state.supplier} onChange={this.handleInputOnChange} />
+                    <TextField label="Buy Price" variant="filled" type="number" name='buyPrice' value={this.state.buyPrice} onChange={this.handleInputOnChange} />
+                    <TextField label="Sale Price" variant="filled" type="number" name='salePrice' value={this.state.salePrice} onChange={this.handleInputOnChange} />
+                    <TextField label="Quantity" variant="filled" type="number" name='qty' value={this.state.qty} onChange={this.handleInputOnChange} />
 
 
-                    <FormControl sx={{ m: 3, minWidth: 240 }}>
-                        <InputLabel id="bookCategory">Category</InputLabel>
+                    <FormControl variant="filled" >
+                        <InputLabel >Category</InputLabel>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            label="Age"
-                            className='mt-6 w-[70%]'
-
+                            id="demo-simple-select-standard"
+                            value={this.state.category}
+                            name='category'
+                            onChange={this.handleInputOnChange}
                         >
-                            <MenuItem >Ten</MenuItem>
-                            <MenuItem >Twenty</MenuItem>
-                            <MenuItem >Thirty</MenuItem>
+                            <MenuItem value="">
+                                <em>None</em>
+                            </MenuItem>
+                            <MenuItem value='fantasy'>Fantasy</MenuItem>
+                            <MenuItem value='scienceFiction'>Science Fiction</MenuItem>
+                            <MenuItem value='dystopian'>Dystopian</MenuItem>
                         </Select>
+
+                        <TextField label="Description" multiline rows={5} variant="filled" name='des' value={this.state.des} onChange={this.handleInputOnChange} />
                     </FormControl>
-                </form>
-                <form className="w-[90%] ml-5 mt-5">
-                    <TextField
-                        id="outlined-password-input"
-                        label="Description"
-                        type="text"
-                        className="w-[100%] "
-                    />
                 </form>
             </div>
         );
