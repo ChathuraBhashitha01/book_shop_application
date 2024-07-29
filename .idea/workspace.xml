@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/images/addImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/SideBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserLayout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserLayout/UserLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +46,7 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/react project/book_shop_application&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/react project/book_shop_application/client/src/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +69,14 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -109,7 +124,15 @@
       <workItem from="1720771431480" duration="17000" />
       <workItem from="1720801542708" duration="1169000" />
       <workItem from="1720970403701" duration="282000" />
-      <workItem from="1720975832741" duration="8663000" />
+      <workItem from="1720975832741" duration="9539000" />
+      <workItem from="1721016290023" duration="341000" />
+      <workItem from="1721017867867" duration="4000" />
+      <workItem from="1721148054131" duration="298000" />
+      <workItem from="1721504234501" duration="661000" />
+      <workItem from="1721639040038" duration="4156000" />
+      <workItem from="1721663384084" duration="6642000" />
+      <workItem from="1721922641163" duration="210000" />
+      <workItem from="1722231767443" duration="3164000" />
     </task>
     <servers />
   </component>

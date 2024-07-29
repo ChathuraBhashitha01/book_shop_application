@@ -1,7 +1,7 @@
 import {Component} from "react";
 import {UserNavBar} from "../UserNavBar/UserNavBar";
 import {UserContent} from "../UserContent/UserContent";
-import {SideBar} from "../SideBar";
+import {SideBar} from "../SideBar/SideBar";
 
 
 export class UserLayout extends Component {
