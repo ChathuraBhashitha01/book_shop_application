@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/images/addImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/SideBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserLayout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserLayout/UserLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/model/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/model/Book.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,29 +33,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/react project/book_shop_application/client/src/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\GDSE 66\\react project\\book_shop_application\\client\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.bin\\www.executor": "Run",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.1",
+    "javascript.nodejs.core.library.typings.version": "20.11.30",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/GDSE 66/react project/book_shop_application/client/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "ts.external.directory.path": "C:\\GDSE 66\\react project\\book_shop_application\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -78,7 +74,7 @@
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Node.js.bin\www">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -132,7 +128,11 @@
       <workItem from="1721639040038" duration="4156000" />
       <workItem from="1721663384084" duration="6642000" />
       <workItem from="1721922641163" duration="210000" />
-      <workItem from="1722231767443" duration="3164000" />
+      <workItem from="1722231767443" duration="16582000" />
+      <workItem from="1722317717960" duration="6278000" />
+      <workItem from="1722335274683" duration="3952000" />
+      <workItem from="1722356931246" duration="6213000" />
+      <workItem from="1722393225104" duration="16832000" />
     </task>
     <servers />
   </component>

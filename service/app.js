@@ -8,7 +8,6 @@ const DBConnection = require('./db/DBConnection');
 DBConnection();
 
 
-var usersRouter = require('./routes/users');
 var bookRouter = require('./routes/BookRoutes');
 var authRouter = require('./routes/authRoutes');
 
@@ -24,7 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/users', usersRouter);
 app.use('/api/v1/books',bookRouter);
 app.use('/api/v1/auth',authRouter);
 

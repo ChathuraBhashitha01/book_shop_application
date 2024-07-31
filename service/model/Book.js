@@ -12,27 +12,35 @@ const BookModel=mongoose.Schema({
         require: true,
         type: String
     },
-    "buy_price":{
-       required:true,
-       type:Number
-    },
-    "sale_price":{
+    "des":{
         required:true,
-        type:Number
-    },
-    "quantity":{
-        required:true,
-        type:Number
+        type:String
     },
     "category":{
         required:true,
         type:String
     },
-    "description":{
+    "author":{
+        require: true,
+        type: String
+    },
+    "supplier":{
         required:true,
         type:String
     },
-    "bookPicture":{
+    "qty":{
+        required:true,
+        type:Number
+    },
+    "buyPrice":{
+       required:true,
+       type:Number
+    },
+    "salePrice":{
+        required:true,
+        type:Number
+    },
+    "picture":{
         required:true,
         type:String
     },
