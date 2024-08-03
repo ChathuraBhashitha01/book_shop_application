@@ -7,16 +7,20 @@ const BookController={
             const bookList=await Book.find();
             res.status(200).json(bookList);
         }catch (error){
-
+            console.error(error)
+            res.status(500).json({error: 'Something when wrong'})
         }
     },
 
     saveBook:async function(req, res, next){
         try {
-            let bookData=res.body
-            await Book.create(bookData);
+            console.log(req.body)
+            let bookData=req.body;
+            const book=await Book.create(bookData);
+            res.status(200).json(book);
         }catch (err){
-
+            console.error(err)
+            res.status(500).json({error: 'Something when wrong'})
         }
     },
 }

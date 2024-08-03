@@ -1,22 +1,40 @@
 import React, {useRef, useState} from "react";
+import axios from "axios";
 import { FormControl, InputLabel, Select, TextField, MenuItem, Card, Input } from "@mui/material";
 import addIcon from '../../../images/addImage.png'
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
+interface BookAddState {
+    code:string;
+    name: string;
+    des:string;
+    category:string;
+    qty: number;
+    buyPrice: number;
+    salePrice:number;
+    author:string;
+    supplier:string;
+    picture:string;
+}
+
 export const BookAddingForm: React.FC = () => {
 
-    const [formData, setFormData] = useState({
+    const api = axios.create({
+        baseURL: `http://localhost:4000`,
+    });
+
+    const [formData, setFormData] = useState<BookAddState>({
         code:'',
         name: '',
         des: '',
         category: '',
         author: '',
         supplier: '',
-        qty: '',
-        buyPrice: '',
-        salePrice: '',
-        picture: null,
+        qty: 0,
+        buyPrice: 0,
+        salePrice: 0,
+        picture: '',
     });
 
     const [preview, setPreview] = useState(null);
@@ -41,7 +59,7 @@ export const BookAddingForm: React.FC = () => {
         // @ts-ignore
         setFormData((prevState) => ({
             ...prevState,
-            picture: file
+            picture: file?.name
         }));
         console.log(file);
 
@@ -54,6 +72,34 @@ export const BookAddingForm: React.FC = () => {
             reader.readAsDataURL(file);
         }
     };
+
+
+    const handleOnSave=async ()=>{
+        try {
+            api.post('/api/v1/books/save',{
+                "code":formData.code,
+                "name": formData.name,
+                "des": formData.des,
+                "category": formData.category,
+                "author": formData.author,
+                "supplier": formData.supplier,
+                "qty": formData.qty,
+                "buyPrice": formData.buyPrice,
+                "salePrice": formData.salePrice,
+                "picture": formData.picture
+            }).then((res: {data: any}) => {
+                const response = res.data;
+                alert(response);
+                console.log(response);
+            }).catch((error: any) => {
+                console.error('Axios Error:'
+                    , error);
+            });
+        }catch (err){
+            console.error(
+                'Error:', err);
+        }
+    }
 
 
     return (
@@ -108,7 +154,7 @@ export const BookAddingForm: React.FC = () => {
                 </div>
 
                 <ButtonGroup variant="contained" aria-label="Basic button group" className="absolute left-16 bottom-10">
-                    <Button>Save</Button>
+                    <Button onClick={handleOnSave}>Save</Button>
                     <Button>Update</Button>
                     <Button>Delete</Button>
                     <Button>Search</Button>

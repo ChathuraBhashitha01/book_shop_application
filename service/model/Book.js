@@ -49,6 +49,6 @@ const BookModel=mongoose.Schema({
     {versionKey:false}
 );
 
-let Book=mongoose.model('Book', BookModel);
+let book=mongoose.model('Book', BookModel);
 
-module.exports= Book;
+module.exports= book;

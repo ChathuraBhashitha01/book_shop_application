@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const DBConnection = require('./db/DBConnection');
+const cors = require('cors');
 
 DBConnection();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
 app.use('/api/v1/books',bookRouter);
 app.use('/api/v1/auth',authRouter);
 
