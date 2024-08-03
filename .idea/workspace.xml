@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/service/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/controller/BookController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/BookController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/db/DBConnection.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/db/DBConnection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/model/Book.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/model/Book.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +71,7 @@
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.bin\www">
+  <component name="RunManager" selected="npm.start">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -140,7 +130,7 @@
       <workItem from="1722335274683" duration="3952000" />
       <workItem from="1722356931246" duration="6213000" />
       <workItem from="1722393225104" duration="28550000" />
-      <workItem from="1722673557148" duration="8702000" />
+      <workItem from="1722673557148" duration="10197000" />
     </task>
     <servers />
   </component>
