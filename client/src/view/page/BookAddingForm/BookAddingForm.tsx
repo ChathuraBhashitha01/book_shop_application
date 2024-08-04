@@ -92,12 +92,10 @@ export const BookAddingForm: React.FC = () => {
                 alert(response);
                 console.log(response);
             }).catch((error: any) => {
-                console.error('Axios Error:'
-                    , error);
+                console.error('Axios Error:', error);
             });
-        }catch (err){
-            console.error(
-                'Error:', err);
+        }catch (error){
+            console.error('Error:', error);
         }
     }
 
@@ -116,8 +114,8 @@ export const BookAddingForm: React.FC = () => {
 
     const handleOnUpdate=async ()=>{
         try {
-            api.post('/api/v1/books/update',{
-                "code":formData.code,
+            api.patch('/api/v1/books/update', {
+                "code": formData.code,
                 "name": formData.name,
                 "des": formData.des,
                 "category": formData.category,
@@ -127,18 +125,27 @@ export const BookAddingForm: React.FC = () => {
                 "buyPrice": formData.buyPrice,
                 "salePrice": formData.salePrice,
                 "picture": formData.picture
-            }).then((res: {data: any}) => {
+            }).then((res: { data: any }) => {
                 const response = res.data;
                 alert(response);
                 console.log(response);
-        }).catch((error: any) => {
-            console.error('Axios Error:'
-                , error);
-        });
+            }).catch((error: any) => {
+                console.error('Axios Error:', error);
+            });
+        }catch (error){
+            console.error('Error:', error);
+        }
     }
 
     const handleOnDelete=async ()=>{
+        try {
+            api.delete('api/v1/books/delete/'+formData.code).then((res)=>{
+                console.log(res);
+            });
 
+        }catch (error){
+            console.error('Error:', error);
+        }
     }
 
     const handleOnGetAll=async ()=>{

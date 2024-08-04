@@ -56,6 +56,17 @@ const BookController={
             res.status(500).json({error: 'Something when wrong'})
         }
     },
+
+    findBookByName:async function(req, res, next){
+        try {
+            let bookName=req.params.name;
+            const book=await Book.findOne({name:bookName});
+            res.status(200).json(book);
+        }catch (err){
+            console.error(err)
+            res.status(500).json({error: 'Something when wrong'})
+        }
+    },
 }
 
 module.exports = BookController;
