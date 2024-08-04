@@ -101,12 +101,36 @@ export const BookAddingForm: React.FC = () => {
         }
     }
 
+    const handleOnSearch=async ()=>{
+        try {
+            api.get('api/v1/books/find/'+formData.code).then((res:{data:any})=>{
+                const jasonData=res.data;
+                console.log(jasonData);
+                setFormData(jasonData);
+            });
+
+        }catch (error){
+            console.error('Error:', error);
+        }
+    }
+
+    const handleOnUpdate=async ()=>{
+
+    }
+
+    const handleOnDelete=async ()=>{
+
+    }
+
+    const handleOnGetAll=async ()=>{
+
+    }
 
     return (
         <div className='relative'>
             <Card className='w-[45%] mt-5 absolute left-6'>
                 <p className='text-2xl mt-3 ml-5'>Book Details</p>
-                <form className='flex flex-col w-[90%] mt-16 ml-5 mb-10' onSubmit={handleOnSubmit}>
+                <form className='flex flex-col w-[90%] mt-8 ml-5 mb-10' onSubmit={handleOnSubmit}>
                     <TextField label="Code" variant="standard" required={true} type="text" name='code'
                                value={formData.code} onChange={handleInputOnChange} />
                     <TextField label="Name" variant="standard" required={true} type="text" name='name'
@@ -141,7 +165,7 @@ export const BookAddingForm: React.FC = () => {
                     </FormControl>
                 </form>
             </Card>
-            <Card className='w-[45%] h-[85vh] mt-5 absolute right-6'>
+            <Card className='w-[45%] h-[87vh] mt-5 absolute right-6'>
                 <div>
                     <form onSubmit={handleOnSubmit}>
                         <input type="file" onChange={handleFileChange}/>
@@ -155,10 +179,10 @@ export const BookAddingForm: React.FC = () => {
 
                 <ButtonGroup variant="contained" aria-label="Basic button group" className="absolute left-16 bottom-10">
                     <Button onClick={handleOnSave}>Save</Button>
-                    <Button>Update</Button>
-                    <Button>Delete</Button>
-                    <Button>Search</Button>
-                    <Button>GetAll</Button>
+                    <Button onClick={handleOnUpdate}>Update</Button>
+                    <Button onClick={handleOnDelete}>Delete</Button>
+                    <Button onClick={handleOnSearch}>Search</Button>
+                    <Button onClick={handleOnGetAll}>GetAll</Button>
                 </ButtonGroup>
             </Card>
         </div>

@@ -2,13 +2,16 @@ import React, {Component} from "react";
 import Book from "../../common/Book/Book";
 import book from "../../../images/senkottan-fcover-sri-lanka.jpg";
 
+
 export class Home extends Component {
+
+
     render() {
         return (
-            <div className=" h-auto ">
-                <div className='w-[100%] h-[50vh] bg-[#f9edee] relative'>
-                    <label className='font-bold text-xl relative left-48 top-10'>NOVELS BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-10'>View All</label>
+            <div className=" h-auto">
+                <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
+                    <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
+                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         <div
                             className="w-40 h-64 mr-2 mb-2  border-gray-200 border-[0.5px] shadow-xl relative bg-white rounded-md ">
@@ -133,9 +136,9 @@ export class Home extends Component {
                     </div>
                 </div>
 
-                <div className='w-[100%] h-[50vh] bg-white relative'>
-                    <label className='font-bold text-xl relative left-48 top-10'>NOVELS BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-10'>View All</label>
+                <div className='w-[100%] h-[55vh] bg-white relative'>
+                    <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
+                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         <div
                             className="w-40 h-64 mr-2 mb-2  border-gray-200 border-[0.5px] shadow-xl relative bg-white rounded-md">
@@ -260,9 +263,9 @@ export class Home extends Component {
                     </div>
                 </div>
 
-                <div className='w-[100%] h-[50vh] bg-[#f9edee] relative'>
-                    <label className='font-bold text-xl relative left-48 top-10'>NOVELS BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-10'>View All</label>
+                <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
+                    <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
+                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         <div
                             className="w-40 h-64 mr-2 mb-2  border-gray-200 border-[0.5px] shadow-xl relative bg-white rounded-md ">
