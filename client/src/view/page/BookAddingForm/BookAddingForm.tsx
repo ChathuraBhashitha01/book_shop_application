@@ -115,7 +115,26 @@ export const BookAddingForm: React.FC = () => {
     }
 
     const handleOnUpdate=async ()=>{
-
+        try {
+            api.post('/api/v1/books/update',{
+                "code":formData.code,
+                "name": formData.name,
+                "des": formData.des,
+                "category": formData.category,
+                "author": formData.author,
+                "supplier": formData.supplier,
+                "qty": formData.qty,
+                "buyPrice": formData.buyPrice,
+                "salePrice": formData.salePrice,
+                "picture": formData.picture
+            }).then((res: {data: any}) => {
+                const response = res.data;
+                alert(response);
+                console.log(response);
+        }).catch((error: any) => {
+            console.error('Axios Error:'
+                , error);
+        });
     }
 
     const handleOnDelete=async ()=>{
