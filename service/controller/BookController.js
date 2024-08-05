@@ -15,7 +15,15 @@ const BookController={
     saveBook:async function(req, res, next){
         try {
             console.log(req.body)
-            let bookData=req.body;
+            const bookData=req.body;
+
+            // const { picture, ...otherFields } = req.body;
+            //
+            // // Decode Base64 image
+            // const base64Data = picture.replace(/^data:image\/\w+;base64,/, '');
+            // const buffer = Buffer.from(base64Data, 'base64');
+            //
+            //
             const book=await Book.create(bookData);
             res.status(200).json(book);
         }catch (err){

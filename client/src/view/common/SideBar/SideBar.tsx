@@ -16,12 +16,12 @@ export const SideBar = () => {
 
             <ul className="flex flex-col ">
 
-                <Link to="/" className='w-auto h-12 bg-blue-600 shadow-md  border-black border-2 mt-1'>
+                <Link to="/user/" className='w-auto h-12 bg-blue-600 shadow-md  border-black border-2 mt-1'>
                     <li className="hidden sm:inline text-black hover:underline">Home</li>
                 </Link>
 
-                <Link to="/" className='w-auto h-12 bg-blue-600 shadow-md  border-black border-2 mt-1'>
-                    <li className="hidden sm:inline text-black hover:underline">Home</li>
+                <Link to="/user/bookDetails" className='w-auto h-12 bg-blue-600 shadow-md  border-black border-2 mt-1'>
+                    <li className="hidden sm:inline text-black hover:underline">Table</li>
                 </Link>
 
                 <Link to="/" className='w-auto h-12 bg-blue-600 shadow-md  border-black border-2 mt-1'>

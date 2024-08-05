@@ -22,7 +22,7 @@ export const  UserNavBar=()=> {
                     <samp className="text-slate-700">Book</samp>
                 </h1>
                 <form className="bg-slate-100 border-[0.5px] shadow-xl p-3 rounded-lg ">
-                    <input type="text" placeholder="Search...." className="bg-transparent focus:outline-none w-24 sm:w-64 h-6 "/>
+                    <input type="text" placeholder="Search...." className="bg-transparent focus:outline-none w-24 sm:w-64  "/>
                 </form>
 
             </div>

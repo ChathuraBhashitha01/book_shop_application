@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/images/book1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/book2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/book3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/wood-background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/images/wood_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/view/common/ViewAll/ViewAll.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/controller/BookController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/BookController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/routes/BookRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/routes/BookRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +51,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Node.js.bin\\www.executor&quot;: &quot;Run&quot;,
-    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
+    &quot;ReactCreateComponentLastSelected&quot;: &quot;classBasedComponent&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
@@ -72,6 +86,8 @@
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\ViewAll" />
+      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\page\BookTableForm" />
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
     </key>
   </component>
@@ -136,7 +152,8 @@
       <workItem from="1722393225104" duration="28550000" />
       <workItem from="1722673557148" duration="24632000" />
       <workItem from="1722712498063" duration="9000" />
-      <workItem from="1722760054658" duration="10991000" />
+      <workItem from="1722760054658" duration="23902000" />
+      <workItem from="1722827826090" duration="16927000" />
     </task>
     <servers />
   </component>

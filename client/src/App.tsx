@@ -16,7 +16,7 @@ function App() {
                 <Route path="/*" Component={DefaultLayout}/>
                 <Route path="/login" Component={Login}/>
                 <Route path="/signup" Component={Signup}/>
-                <Route path="/user" Component={UserLayout}/>
+                <Route path="/user/*" Component={UserLayout}/>
                 <Route path="/nav" Component={UserNavBar}/>
             </Routes>
         </BrowserRouter>

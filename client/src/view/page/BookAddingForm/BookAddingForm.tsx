@@ -10,12 +10,13 @@ interface BookAddState {
     name: string;
     des:string;
     category:string;
-    qty: number;
-    buyPrice: number;
-    salePrice:number;
+    qty: any;
+    buyPrice: any;
+    salePrice:any;
     author:string;
     supplier:string;
     picture:string;
+    preview:string;
 }
 
 export const BookAddingForm: React.FC = () => {
@@ -31,13 +32,14 @@ export const BookAddingForm: React.FC = () => {
         category: '',
         author: '',
         supplier: '',
-        qty: 0,
-        buyPrice: 0,
-        salePrice: 0,
+        qty: '',
+        buyPrice: '',
+        salePrice: '',
         picture: '',
+        preview:''
     });
 
-    const [preview, setPreview] = useState(null);
+    // const [preview, setPreview] = useState(null);
 
     const handleInputOnChange = (event: { target: { name: any; value: any; }; }) => {
         const { name, value } = event.target;
@@ -55,19 +57,19 @@ export const BookAddingForm: React.FC = () => {
 
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0] || null;
-        // @ts-ignore
-        setFormData((prevState) => ({
-            ...prevState,
-            picture: file?.name
-        }));
-        console.log(file);
-
+        const file = event.target.files?.[0];
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                // @ts-ignore
-                setPreview(reader.result as string);
+                const base64String = reader.result as string;
+                setFormData((prevState) => ({
+                    ...prevState,
+                    picture: base64String
+                }));
+                setFormData((prevState) => ({
+                    ...prevState,
+                    preview: base64String
+                }));
             };
             reader.readAsDataURL(file);
         }
@@ -105,6 +107,11 @@ export const BookAddingForm: React.FC = () => {
                 const jasonData=res.data;
                 console.log(jasonData);
                 setFormData(jasonData);
+
+                setFormData((prevState) => ({
+                    ...prevState,
+                    preview: jasonData.picture
+                }));
             });
 
         }catch (error){
@@ -182,6 +189,7 @@ export const BookAddingForm: React.FC = () => {
                             <MenuItem value="">
                                 <em>None</em>
                             </MenuItem>
+                            <MenuItem value='novel'>Novel</MenuItem>
                             <MenuItem value='fantasy'>Fantasy</MenuItem>
                             <MenuItem value='scienceFiction'>Science Fiction</MenuItem>
                             <MenuItem value='dystopian'>Dystopian</MenuItem>
@@ -196,9 +204,9 @@ export const BookAddingForm: React.FC = () => {
                     <form onSubmit={handleOnSubmit}>
                         <input type="file" onChange={handleFileChange}/>
                     </form>
-                    {preview && (
+                    {formData.preview && (
                         <div>
-                            <img src={preview} alt="Preview" className='w-56 h-auto absolute top-12  left-0 right-0 mx-auto'/>
+                            <img src={formData.preview} alt="Preview" className='w-56 h-auto absolute top-12  left-0 right-0 mx-auto'/>
                         </div>
                     )}
                 </div>
