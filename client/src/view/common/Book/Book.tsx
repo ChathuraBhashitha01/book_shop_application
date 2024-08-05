@@ -1,15 +1,29 @@
 import React, {Component} from 'react';
 import book from '../../../images/senkottan-fcover-sri-lanka.jpg'
+import {ShoppingCart} from "../ShoppingCart/ShoppingCart";
 
 interface BookProps {
     data: any;
 }
 
-class Book extends Component<BookProps> {
+interface BookState {
+    isActive: boolean
+}
+
+class Book extends Component<BookProps,BookState> {
 
     constructor(props:BookProps) {
         super(props)
+        this.state = {
+            isActive: false
+        }
+    }
 
+    private addToCartOnClick
+        = () => {
+        this.setState({
+            isActive: true
+        });
     }
 
 
@@ -35,8 +49,16 @@ class Book extends Component<BookProps> {
                             className='text-[15px] font-bold absolute bottom-2 left-3 mx-auto'>Rs{data.salePrice} /=</label>
                     </div>
                 </div>
-                <button className="w-full  p-[2.4px] bg-blue-600 text-[8px] border-gray-500 border-[0.5px]"
-                        >Add to Cart</button>
+
+                {
+                    this.state.isActive ?
+                        <ShoppingCart data={{
+                            product: data,
+                            isAdded: this.state.isActive
+                        }}/>
+                        :
+                        <button className="w-full  p-[2.4px] bg-blue-600 text-[8px] border-gray-500 border-[0.5px]" onClick={this.addToCartOnClick}>Add to Cart</button>
+                }
 
             </div>
         );
