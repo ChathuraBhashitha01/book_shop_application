@@ -36,7 +36,7 @@ export class NavBar extends Component {
 
                 <button className="text-[20px] text-black  pl-3 pr-3 absolute top-0 bottom-0 right-[100px] mx-auto">
                     <Link
-                        to="/cart"><img src={cartIcon} alt="" className="w-10 h-10 inline-block pr-1"/></Link></button>
+                        to="/place-order"><img src={cartIcon} alt="" className="w-10 h-10 inline-block pr-1"/></Link></button>
                 <button className="text-[20px] text-black  pl-3 pr-3 absolute top-0 bottom-0 right-8 mx-auto"><Link
                     to="/login">Sing In</Link></button>
 

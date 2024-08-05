@@ -43,10 +43,6 @@ export class Home extends Component {
         }
     }
 
-    if(){
-
-    }
-
 
     render() {
         // @ts-ignore

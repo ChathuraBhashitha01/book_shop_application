@@ -1,18 +1,50 @@
 import {Component} from "react";
+import {CartItem} from "../../../model/CartItem";
 
-interface ModifyCartProps {
+interface ShoppingCartProps {
     data: any
 }
-interface ModifyCartState {
+interface ShoppingCartState {
     itemCount: number
 }
-export class ShoppingCart extends Component <ModifyCartProps, ModifyCartState>{
+export class ShoppingCart extends Component <ShoppingCartProps, ShoppingCartState>{
+    public static itemsList:CartItem[] = [];
 
-
-    constructor(props: ModifyCartProps) {
+    constructor(props: ShoppingCartProps) {
         super(props);
         this.state = {
             itemCount: 1
+        }
+    }
+
+    componentDidMount() {
+        const {itemCount} = this.state;
+
+        if (this.props.data.isAdded) {
+            if (!ShoppingCart.itemsList.find(item=>item.book.code ===this.props.data.product.id)) {
+                ShoppingCart.itemsList.push(
+                    {
+                        book: this.props.data.product,
+                        itemCount: itemCount
+                    }
+                );
+                console.log(ShoppingCart.itemsList);
+            }
+        }
+    }
+
+    componentDidUpdate(prevProps: Readonly<ShoppingCartProps>, prevState: Readonly<ShoppingCartState>, snapshot?: any) {
+        let {itemCount}= this.state;
+        let item= ShoppingCart.itemsList.find(item =>item.book.code ===this.props.data.product.id);
+        if (item) {
+            let index =ShoppingCart.itemsList.indexOf(item);
+            ShoppingCart.itemsList.splice(index, 1);
+            ShoppingCart.itemsList.push({
+                    book: this.props.data.product,
+                    itemCount: itemCount
+            });
+
+            console.log(ShoppingCart.itemsList);
         }
     }
 

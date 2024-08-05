@@ -1,66 +1,72 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import React, {Component} from 'react';
 import axios from "axios";
 
-function createData(
-    name: string,
-    calories: number,
-    fat: number,
-    carbs: number,
-    protein: number,
-) {
-    return { name, calories, fat, carbs, protein };
-}
+export class BookTableForm extends Component {
 
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+    private api:any;
 
-export function BookTableForm() {
+    constructor(props: {}) {
+        super(props);
+        this.api= axios.create({
+            baseURL: `http://localhost:4000`
+        });
+        this.state = {
+            data: []
+        }
+    }
+    componentDidMount() {
+        this.fetchData();
+    }
+    fetchData = async () => {
+        try {
 
-    const api = axios.create({
-        baseURL: `http://localhost:4000`,
-    });
+            this.api.get(`api/v1/books/all`).then((res:{data:any})=>{
+                const jsonData=res.data;
+                this.setState({data: jsonData});
+            }).catch((error:any):void=>{
+                console.error("Axios error",error)
+            });
 
-    return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Dessert (100g serving)</TableCell>
-                        <TableCell align="right">Calories</TableCell>
-                        <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                        <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="right">{row.calories}</TableCell>
-                            <TableCell align="right">{row.fat}</TableCell>
-                            <TableCell align="right">{row.carbs}</TableCell>
-                            <TableCell align="right">{row.protein}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
-    );
+        } catch (error) {
+            console.error(
+                'Error fetching data:',
+                error);
+        }
+    }
+
+    render() {
+        // @ts-ignore
+        const {data} = this.state;
+        return (
+            <div>
+                <table className="w-full overflow-hidden overflow-y-scroll">
+                    <tr className="bg-blue-600">
+                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Code</th>
+                        <th className="text-10 font-normal border-black  border-[0.5px] px-1">Name</th>
+                        <th className="text-10 font-normal border-black  border-[0.5px]  px-1">Category</th>
+                        <th className="text-10 font-normal  border-black border-[0.5px] px-1">Quantity</th>
+                        <th className="text-10 font-normal border-black border-[0.5px] px-1">BuyPrice</th>
+                        <th className="text-10 font-normal border-black border-[0.5px] px-1">SalePrice</th>
+                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Author</th>
+                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Supplier</th>
+                    </tr>
+                    {
+                       data.map((book: any) => (
+                            <tr className="border-black  border-[0.5px]  px-1">
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.code}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.name}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.category}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.qty}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.buyPrice}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.salePrice}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.author}</td>
+                                <td className="text-10 border-black border-[0.5px] px-1">{book.supplier}</td>
+                            </tr>
+                        ))
+                    }
+                </table>
+
+            </div>
+        );
+    }
 }

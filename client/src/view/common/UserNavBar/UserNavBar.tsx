@@ -10,6 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import bookIcon from '../../../images/creative-abstract-book-feather-logo-design-vector.jpg';
 import icon from "../../../images/creative-abstract-book-feather-logo-design-vector.jpg";
+import SearchIcon from "@mui/icons-material/Search";
 
 
 const settings = ['Profile','Logout'];
@@ -21,8 +22,12 @@ export const  UserNavBar=()=> {
                     <samp className="text-slate-500">My</samp>
                     <samp className="text-slate-700">Book</samp>
                 </h1>
-                <form className="bg-slate-100 border-[0.5px] shadow-xl p-3 rounded-lg ">
-                    <input type="text" placeholder="Search...." className="bg-transparent focus:outline-none w-24 sm:w-64  "/>
+
+                <form className="bg-white border-[0.5px] shadow-xl ml-52">
+                    <input type="text" placeholder="Search...." className="bg-transparent w-64  "/>
+                    <IconButton type="button" sx={{p: '10px'}} aria-label="search">
+                        <SearchIcon/>
+                    </IconButton>
                 </form>
 
             </div>

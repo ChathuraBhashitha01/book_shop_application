@@ -2,6 +2,6 @@ import {BookModel} from "./BookModel";
 
 
 export interface CartItem {
-    product: BookModel,
+    book: BookModel,
     itemCount: number
 }
