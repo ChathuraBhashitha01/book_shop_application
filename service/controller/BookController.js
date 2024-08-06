@@ -75,6 +75,17 @@ const BookController={
             res.status(500).json({error: 'Something when wrong'})
         }
     },
+    findAllBCategory:async (req, res, next)=>{
+        try {
+            let bookName=req.params.category;
+            const book=await Book.find({name:bookName});
+            res.status(200).json(book);
+        }catch (err){
+            console.error(err)
+            res.status(500).json({error: 'Something when wrong'})
+        }
+    }
+
 }
 
 module.exports = BookController;

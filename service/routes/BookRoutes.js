@@ -8,6 +8,7 @@ router.post('/save',  bookRoutes.saveBook);
 router.patch('/update',bookRoutes.updateBook);
 router.delete('/delete/:code',bookRoutes.deleteBook);
 router.get('/find/:code',bookRoutes.findBook);
-router.get('/findByName/:name',bookRoutes.findBookByName)
+router.get('/findByName/:name',bookRoutes.findBookByName);
+router.get('/findByCategory/:category',bookRoutes.findAllBCategory);
 
 module.exports=router;
