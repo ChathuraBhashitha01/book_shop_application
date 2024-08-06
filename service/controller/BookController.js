@@ -78,7 +78,7 @@ const BookController={
     findAllBCategory:async (req, res, next)=>{
         try {
             let bookName=req.params.category;
-            const book=await Book.find({name:bookName});
+            const book=await Book.find({category:bookName});
             res.status(200).json(book);
         }catch (err){
             console.error(err)

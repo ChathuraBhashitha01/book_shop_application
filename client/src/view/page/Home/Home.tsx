@@ -8,6 +8,7 @@ import book2 from "../../../images/book2.png";
 import book3 from "../../../images/book3.png";
 import axios from 'axios'
 import {ViewAll} from "../../common/ViewAll/ViewAll";
+import {Link} from "react-router-dom";
 
 
 
@@ -46,7 +47,6 @@ export class Home extends Component {
 
     private handleViewAllClicks=(event: React.MouseEvent<HTMLButtonElement>)=>{
         const category = event.currentTarget.value;
-        // <ViewAll data={category}/>
     }
 
 
@@ -63,12 +63,15 @@ export class Home extends Component {
 
                 </div>
 
-                <div className='w-[100%] h-[55vh] bg-white relative'>
+                <div className='h-[55vh] bg-white relative '>
                     <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
-                    <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel' onClick={this.handleViewAllClicks}>View All</button>
-                    <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
-                        {
-                            data.slice(0, 6).map((book: any) => {
+                    <Link to='/view' >
+                        <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
+                    </Link>
+
+                    <div className="flex flex-row gap-4 w-[75%] h-72 absolute  bottom-6 left-0 right-0 mx-auto">
+                    {
+                            data.slice(0,6).map((book: any) => {
 
                             if (book.category.includes('novel')) {
                                 return <Book key={book.code} data={book}/>;
@@ -81,7 +84,9 @@ export class Home extends Component {
 
                 <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
                     <label className='font-bold text-xl relative left-48 top-12'>SCIENCE FICTION BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
+                    <Link to='/view' >
+                        <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
+                    </Link>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         {data.map((book: any) => {
 
@@ -95,7 +100,9 @@ export class Home extends Component {
 
                 <div className='w-[100%] h-[55vh] bg-white relative'>
                     <label className='font-bold text-xl relative left-48 top-12'>FANTASY BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
+                    <Link to='/view' >
+                        <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
+                    </Link>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         {data.map((book: any) => {
 
@@ -109,7 +116,9 @@ export class Home extends Component {
 
                 <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
                     <label className='font-bold text-xl relative left-48 top-12'>DYSTOPIAN BOOKS</label>
-                    <label className='font-light text-[14px] relative left-[68vw] top-12'>View All</label>
+                    <Link to='/view' >
+                        <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
+                    </Link>
                     <div className="flex flex-wrap gap-4 w-[75%] absolute  bottom-6 left-0 right-0 mx-auto ">
                         {data.map((book: any) => {
 

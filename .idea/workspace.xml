@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/view/common/View/View.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/ViewAll/ViewAll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/ViewAll/ViewAll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/controller/BookController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/BookController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/routes/BookRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/routes/BookRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +145,8 @@
       <workItem from="1722827826090" duration="20743000" />
       <workItem from="1722859318581" duration="22967000" />
       <workItem from="1722933238149" duration="9764000" />
-      <workItem from="1722944729358" duration="1322000" />
+      <workItem from="1722944729358" duration="2763000" />
+      <workItem from="1722952385461" duration="14209000" />
     </task>
     <servers />
   </component>
