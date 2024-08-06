@@ -19,8 +19,7 @@ class Book extends Component<BookProps,BookState> {
         }
     }
 
-    private addToCartOnClick
-        = () => {
+    private addToCartOnClick = () => {
         this.setState({
             isActive: true
         });
@@ -35,7 +34,7 @@ class Book extends Component<BookProps,BookState> {
             <div
                 className="w-40 h-72 mr-2 mb-2  border-gray-200 border-[0.5px] shadow-xl relative bg-white rounded-md ">
                 <div>
-                    <img className="h-[55%] w-[60%] absolute top-6 left-0 right-0 mx-auto " src={book}
+                    <img className="h-[55%] w-[60%] absolute top-6 left-0 right-0 mx-auto " src={data.picture}
                          alt=""/>
                 </div>
                 <div className="flex">
@@ -51,11 +50,7 @@ class Book extends Component<BookProps,BookState> {
                 </div>
 
                 {
-                    this.state.isActive ?
-                        <ShoppingCart data={{
-                            product: data,
-                            isAdded: this.state.isActive
-                        }}/>
+                    this.state.isActive ? <ShoppingCart data={{book: data,isAdded: this.state.isActive}}/>
                         :
                         <button className="w-full  p-[2.4px] bg-blue-600 text-[8px] border-gray-500 border-[0.5px]" onClick={this.addToCartOnClick}>Add to Cart</button>
                 }

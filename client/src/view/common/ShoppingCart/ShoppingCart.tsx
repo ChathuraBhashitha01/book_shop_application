@@ -21,10 +21,10 @@ export class ShoppingCart extends Component <ShoppingCartProps, ShoppingCartStat
         const {itemCount} = this.state;
 
         if (this.props.data.isAdded) {
-            if (!ShoppingCart.itemsList.find(item=>item.book.code ===this.props.data.product.id)) {
+            if (!ShoppingCart.itemsList.find(item=>item.book.code ===this.props.data.book.code)) {
                 ShoppingCart.itemsList.push(
                     {
-                        book: this.props.data.product,
+                        book: this.props.data.book,
                         itemCount: itemCount
                     }
                 );
@@ -35,12 +35,12 @@ export class ShoppingCart extends Component <ShoppingCartProps, ShoppingCartStat
 
     componentDidUpdate(prevProps: Readonly<ShoppingCartProps>, prevState: Readonly<ShoppingCartState>, snapshot?: any) {
         let {itemCount}= this.state;
-        let item= ShoppingCart.itemsList.find(item =>item.book.code ===this.props.data.product.id);
+        let item= ShoppingCart.itemsList.find(item =>item.book.code ===this.props.data.book.code);
         if (item) {
             let index =ShoppingCart.itemsList.indexOf(item);
             ShoppingCart.itemsList.splice(index, 1);
             ShoppingCart.itemsList.push({
-                    book: this.props.data.product,
+                    book: this.props.data.book,
                     itemCount: itemCount
             });
 

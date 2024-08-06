@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/controller/PaymentController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/model/Payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/routes/PaymentRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/model/CartItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/model/CartItem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/ShoppingCart/ShoppingCart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/ShoppingCart/ShoppingCart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,8 @@
       <workItem from="1722712498063" duration="9000" />
       <workItem from="1722760054658" duration="23902000" />
       <workItem from="1722827826090" duration="20743000" />
-      <workItem from="1722859318581" duration="4026000" />
+      <workItem from="1722859318581" duration="22967000" />
+      <workItem from="1722933238149" duration="445000" />
     </task>
     <servers />
   </component>

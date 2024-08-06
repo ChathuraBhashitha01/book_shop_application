@@ -11,6 +11,7 @@ DBConnection();
 
 var bookRouter = require('./routes/BookRoutes');
 var authRouter = require('./routes/authRoutes');
+var paymentRouter = require('./routes/PaymentRoutes');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use('/api/v1/books',bookRouter);
 app.use('/api/v1/auth',authRouter);
+app.use('/api/v1/payment',paymentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
