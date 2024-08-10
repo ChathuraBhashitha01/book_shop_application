@@ -16,10 +16,12 @@ const PaymentModel=mongoose.Schema({
             required:true,
             type:Number
         },
-        "details":{
-            require: true,
-            type: []
-        },
+        "itemsList": [{
+                code: {type:String, required:true},
+                name:{type:String, required:true},
+                salePrice: {type:Number, required:true},
+                itemCount: {type:Number, required:true}
+        }],
     },
     {versionKey:false}
 );

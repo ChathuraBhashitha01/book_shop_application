@@ -61,11 +61,19 @@ export class PlaceOrderForm extends Component<ShoppingCartProps,ShoppingState> {
 
     private handlePlaceOrder=async ()=>{
         try {
+
+            const items=this.state.itemsList.map(item=>({
+                code:  item.book.code,
+                name: item.book.name,
+                salePrice: item.book.salePrice,
+                itemCount:item.itemCount
+            }))
+
             this.api.post('/api/v1/payment/placeOrder',{
                 "paymentID":this.state.paymentID,
                 "date": this.state.date,
                 "total": this.state.total,
-                "itemsList": this.state.itemsList,
+                "itemsList": items,
             }).then((res: {data: any}) => {
                 const response = res.data;
                 alert(response);

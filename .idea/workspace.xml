@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/view/common/View/View.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/MainContent/MainContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/ViewAll/ViewAll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/ViewAll/ViewAll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/controller/BookController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/BookController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/controller/PaymentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/PaymentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/model/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/model/Payment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +147,8 @@
       <workItem from="1722859318581" duration="22967000" />
       <workItem from="1722933238149" duration="9764000" />
       <workItem from="1722944729358" duration="2763000" />
-      <workItem from="1722952385461" duration="14209000" />
+      <workItem from="1722952385461" duration="14533000" />
+      <workItem from="1723259356313" duration="13662000" />
     </task>
     <servers />
   </component>

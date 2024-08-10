@@ -50,8 +50,7 @@ class Book extends Component<BookProps,BookState> {
                 </div>
 
                 {
-                    this.state.isActive ? <ShoppingCart data={{book: data,isAdded: this.state.isActive}}/>
-                        :
+                    this.state.isActive ? <ShoppingCart data={{book: data,isAdded: this.state.isActive}}/> :
                         <button className="w-full  p-[2.4px] bg-blue-600 text-[8px] border-gray-500 border-[0.5px]" onClick={this.addToCartOnClick}>Add to Cart</button>
                 }
 

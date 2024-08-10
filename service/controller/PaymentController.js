@@ -7,11 +7,25 @@ const PaymentController={
         const session = await mongoose.startSession();
         session.startTransaction();
         try {
-            console.log(req.body);
-            const paymentData=req.body;
-            // const payment=Payment.create(paymentData)
-        }catch (err){
-            console.error(err)
+            const { paymentID, date, total, itemsList } = req.body;
+
+            const payment = new Payment({ paymentID, date, total, itemsList });
+            await payment.save({ session });
+
+            for (const item of itemsList) {
+                await Book.updateOne(
+                    { code: item.code },
+                    { $inc: { qty: -item.itemCount } },
+                    { session }
+                );
+            }
+
+            await session.commitTransaction();
+            await session.endSession();
+        }catch (error){
+            await session.abortTransaction();
+            await session.endSession();
+            console.error('Error:', error);
             res.status(500).json({error: 'Something when wrong'})
         }
     },

@@ -16,7 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const settings = ['Profile','Logout'];
 export const  UserNavBar=()=> {
     return (
-        <header className="bg-blue-600 shadow-md">
+        <header className="bg-[#f9edee] shadow-md">
             <div className="flex justify-between items-center max-w-6xl mx-auto">
                 <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
                     <samp className="text-slate-500">My</samp>

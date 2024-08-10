@@ -1,72 +1,57 @@
-import React, {Component} from 'react';
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios, { AxiosInstance } from 'axios';
 
-export class BookTableForm extends Component {
+const api: AxiosInstance = axios.create({
+    baseURL: `http://localhost:4000`,
+});
 
-    private api:any;
+export  const BookTableForm = () => {
+    const [data, setData] = useState([]);
 
-    constructor(props: {}) {
-        super(props);
-        this.api= axios.create({
-            baseURL: `http://localhost:4000`
-        });
-        this.state = {
-            data: []
-        }
-    }
-    componentDidMount() {
-        this.fetchData();
-    }
-    fetchData = async () => {
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
         try {
-
-            this.api.get(`api/v1/books/all`).then((res:{data:any})=>{
-                const jsonData=res.data;
-                this.setState({data: jsonData});
-            }).catch((error:any):void=>{
-                console.error("Axios error",error)
-            });
-
+            const res = await api.get(`api/v1/books/all`);
+            setData(res.data);
         } catch (error) {
-            console.error(
-                'Error fetching data:',
-                error);
+            console.error('Error fetching data:', error);
         }
-    }
+    };
 
-    render() {
-        // @ts-ignore
-        const {data} = this.state;
-        return (
-            <div>
-                <table className="w-full overflow-hidden overflow-y-scroll">
-                    <tr className="bg-blue-600">
-                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Code</th>
-                        <th className="text-10 font-normal border-black  border-[0.5px] px-1">Name</th>
-                        <th className="text-10 font-normal border-black  border-[0.5px]  px-1">Category</th>
-                        <th className="text-10 font-normal  border-black border-[0.5px] px-1">Quantity</th>
-                        <th className="text-10 font-normal border-black border-[0.5px] px-1">BuyPrice</th>
-                        <th className="text-10 font-normal border-black border-[0.5px] px-1">SalePrice</th>
-                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Author</th>
-                        <th className="text-10 font-normal border-black border-[0.5px] px-1">Supplier</th>
+    return (
+        <div>
+            <table className="w-full overflow-hidden overflow-y-scroll">
+                <thead>
+                <tr className="bg-[#f9edee]">
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Code</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Name</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Category</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Quantity</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">BuyPrice</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">SalePrice</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Author</th>
+                    <th className="text-10 font-normal border-gray-300 border-[0.5px] px-1">Supplier</th>
+                </tr>
+                </thead>
+                <tbody>
+                {data.map((book: any) => (
+                    <tr key={book.code} className="border-black border-[0.5px] px-1">
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.code}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.name}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.category}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.qty}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.buyPrice}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.salePrice}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.author}</td>
+                        <td className="text-10 border-gray-300 border-[0.5px] px-1">{book.supplier}</td>
                     </tr>
-                    {
-                       data.map((book: any) => (
-                            <tr className="border-black  border-[0.5px]  px-1">
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.code}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.name}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.category}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.qty}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.buyPrice}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.salePrice}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.author}</td>
-                                <td className="text-10 border-black border-[0.5px] px-1">{book.supplier}</td>
-                            </tr>
-                        ))
-                    }
-                </table>
+                ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
 
-            </div>
-        );
-    }
-}

@@ -19,7 +19,7 @@ interface BookAddState {
     preview:string;
 }
 
-export const BookAddingForm: React.FC = () => {
+export const BookAddingForm= () => {
 
     const api = axios.create({
         baseURL: `http://localhost:4000`,
