@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/Book/Book.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/PlaseOrder/PlaceOrderForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/controller/PaymentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/PaymentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/model/Payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/model/Payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +40,7 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/react project/book_shop_application/client/src/model&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/React/my-workfolio&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -149,6 +144,11 @@
       <workItem from="1722944729358" duration="2763000" />
       <workItem from="1722952385461" duration="14533000" />
       <workItem from="1723259356313" duration="13662000" />
+      <workItem from="1723315343535" duration="3937000" />
+      <workItem from="1723365834059" duration="1201000" />
+      <workItem from="1723367682728" duration="2827000" />
+      <workItem from="1723437843076" duration="17000" />
+      <workItem from="1723475977776" duration="307000" />
     </task>
     <servers />
   </component>
