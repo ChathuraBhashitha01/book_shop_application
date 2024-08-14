@@ -29,6 +29,31 @@ const PaymentController={
             res.status(500).json({error: 'Something when wrong'})
         }
     },
+
+    findPayment:async function(req, res, next){
+        try{
+            const payment=await Payment.find();
+            res.status(200).json(payment);
+        }catch (error){
+            console.error(error)
+            res.status(500).json({error: 'Something when wrong'})
+        }
+    },
+
+    findTotal:async function(req, res, next){
+        let total=0;
+        const currentDate = new Date();
+        const payments=await Payment.find()
+
+        for (const payment of payments) {
+            const data=payment.date.split('T')[0];
+            if(currentDate.toISOString().split('T')[0] === data){
+                total=total+payment.total;
+            }
+        }
+
+        res.status(200).json(total);
+    }
 }
 
 module.exports =PaymentController;

@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/images/bookset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/view/page/PaymentsDetails/PaymentDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/controller/PaymentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/PaymentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/routes/PaymentRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/routes/PaymentRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,30 +40,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.bin\\www.executor&quot;: &quot;Run&quot;,
-    &quot;ReactCreateComponentLastSelected&quot;: &quot;classBasedComponent&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.30&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/GDSE 66/React/my-workfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\GDSE 66\\react project\\book_shop_application\\client\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.bin\\www.executor": "Run",
+    "ReactCreateComponentLastSelected": "functionDeclarationComponent",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.1",
+    "javascript.nodejs.core.library.typings.version": "20.11.30",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/GDSE 66/react project/book_shop_application/client/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "ts.external.directory.path": "C:\\GDSE 66\\react project\\book_shop_application\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -66,8 +75,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\model" />
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\images" />
+      <recent name="C:\GDSE 66\react project\book_shop_application\client\src\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\page\PlaseOrder" />
@@ -76,7 +85,7 @@
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.bin\www">
+  <component name="RunManager" selected="npm.start">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -148,7 +157,10 @@
       <workItem from="1723365834059" duration="1201000" />
       <workItem from="1723367682728" duration="2827000" />
       <workItem from="1723437843076" duration="17000" />
-      <workItem from="1723475977776" duration="307000" />
+      <workItem from="1723475977776" duration="1158000" />
+      <workItem from="1723522474827" duration="2824000" />
+      <workItem from="1723525381866" duration="7308000" />
+      <workItem from="1723614104585" duration="8582000" />
     </task>
     <servers />
   </component>

@@ -77,86 +77,118 @@ export const BookAddingForm= () => {
 
 
     const handleOnSave=async ()=>{
-        try {
-            api.post('/api/v1/books/save',{
-                "code":formData.code,
-                "name": formData.name,
-                "des": formData.des,
-                "category": formData.category,
-                "author": formData.author,
-                "supplier": formData.supplier,
-                "qty": formData.qty,
-                "buyPrice": formData.buyPrice,
-                "salePrice": formData.salePrice,
-                "picture": formData.picture
-            }).then((res: {data: any}) => {
-                const response = res.data;
-                alert(response);
-                console.log(response);
-            }).catch((error: any) => {
-                console.error('Axios Error:', error);
-            });
-        }catch (error){
-            console.error('Error:', error);
+        if(formData.code!=='' && formData.name!=='' && formData.des!=='' && formData.category!=='' && formData.author!==''&& formData.supplier!==''
+            && formData.qty!==''&& formData.buyPrice!==''&& formData.salePrice!==''&& formData.picture!==''){
+            try {
+                api.post('/api/v1/books/save',{
+                    "code":formData.code,
+                    "name": formData.name,
+                    "des": formData.des,
+                    "category": formData.category,
+                    "author": formData.author,
+                    "supplier": formData.supplier,
+                    "qty": formData.qty,
+                    "buyPrice": formData.buyPrice,
+                    "salePrice": formData.salePrice,
+                    "picture": formData.picture
+                }).then((res: {data: any}) => {
+                    const response = res.data;
+                    alert(response);
+                    console.log(response);
+                }).catch((error: any) => {
+                    console.error('Axios Error:', error);
+                });
+            }catch (error){
+                console.error('Error:', error);
+            }
+        }else {
+            alert("All Field are Required")
         }
     }
 
     const handleOnSearch=async ()=>{
-        try {
-            api.get('api/v1/books/find/'+formData.code).then((res:{data:any})=>{
-                const jasonData=res.data;
-                console.log(jasonData);
-                setFormData(jasonData);
+        if(formData.code!==''){
+            try {
+                api.get('api/v1/books/find/'+formData.code).then((res:{data:any})=>{
+                    const jasonData=res.data;
+                    console.log(jasonData);
+                    setFormData(jasonData);
 
-                setFormData((prevState) => ({
-                    ...prevState,
-                    preview: jasonData.picture
-                }));
-            });
+                    setFormData((prevState) => ({
+                        ...prevState,
+                        preview: jasonData.picture
+                    }));
+                });
 
-        }catch (error){
-            console.error('Error:', error);
+            }catch (error){
+                console.error('Error:', error);
+            }
+        }else {
+            alert("Required Code")
         }
     }
 
     const handleOnUpdate=async ()=>{
-        try {
-            api.patch('/api/v1/books/update', {
-                "code": formData.code,
-                "name": formData.name,
-                "des": formData.des,
-                "category": formData.category,
-                "author": formData.author,
-                "supplier": formData.supplier,
-                "qty": formData.qty,
-                "buyPrice": formData.buyPrice,
-                "salePrice": formData.salePrice,
-                "picture": formData.picture
-            }).then((res: { data: any }) => {
-                const response = res.data;
-                alert(response);
-                console.log(response);
-            }).catch((error: any) => {
-                console.error('Axios Error:', error);
-            });
-        }catch (error){
-            console.error('Error:', error);
+        if(formData.code!=='' && formData.name!=='' && formData.des!=='' && formData.category!=='' && formData.author!==''&& formData.supplier!==''
+            && formData.qty!==''&& formData.buyPrice!==''&& formData.salePrice!==''&& formData.picture!=='') {
+            try {
+                api.patch('/api/v1/books/update', {
+                    "code": formData.code,
+                    "name": formData.name,
+                    "des": formData.des,
+                    "category": formData.category,
+                    "author": formData.author,
+                    "supplier": formData.supplier,
+                    "qty": formData.qty,
+                    "buyPrice": formData.buyPrice,
+                    "salePrice": formData.salePrice,
+                    "picture": formData.picture
+                }).then((res: { data: any }) => {
+                    const response = res.data;
+                    alert(response);
+                    console.log(response);
+                }).catch((error: any) => {
+                    console.error('Axios Error:', error);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }else {
+            alert("All Field are Required")
         }
     }
 
     const handleOnDelete=async ()=>{
-        try {
-            api.delete('api/v1/books/delete/'+formData.code).then((res)=>{
-                console.log(res);
-            });
+        if(formData.code!==''){
+            try {
+                api.delete('api/v1/books/delete/'+formData.code).then((res)=>{
+                    console.log(res);
+                });
 
-        }catch (error){
-            console.error('Error:', error);
+            }catch (error){
+                console.error('Error:', error);
+            }
+        }else {
+            alert("Required Code")
         }
     }
 
-    const handleOnGetAll=async ()=>{
+    const handleOnClearAll= ()=>{
 
+
+        setFormData((prevState) => ({
+            code:'',
+            name:'',
+           des:'',
+            category:'',
+            author:'',
+            supplier:'',
+            qty:'',
+           buyPrice:'',
+            salePrice:'',
+            picture:'',
+            preview:'',
+        }));
     }
 
     return (
@@ -216,7 +248,7 @@ export const BookAddingForm= () => {
                     <Button onClick={handleOnUpdate}>Update</Button>
                     <Button onClick={handleOnDelete}>Delete</Button>
                     <Button onClick={handleOnSearch}>Search</Button>
-                    <Button onClick={handleOnGetAll}>GetAll</Button>
+                    <Button onClick={handleOnClearAll}>Clear</Button>
                 </ButtonGroup>
             </Card>
         </div>

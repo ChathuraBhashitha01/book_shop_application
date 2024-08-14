@@ -30,6 +30,13 @@ export const  UserNavBar=()=> {
                     </IconButton>
                 </form>
 
+                <ul className="flex flex-row ml-5">
+                    <li className="hidden sm:inline text-black text-[15px] ml-14  hover:underline"> <Link to="/user/" >Add Book</Link></li>
+                    <li className="hidden sm:inline text-black text-[15px] ml-12 hover:underline"><Link to="/user/bookDetails" >View Details </Link></li>
+                    <li className="hidden sm:inline text-black text-[15px] ml-12 hover:underline"><Link to="/user/sales">View Sales </Link></li>
+                    <li className="hidden sm:inline text-black text-[15px]  ml-14 hover:underline"> <Link to="/">Log Out</Link></li>
+                </ul>
+
             </div>
         </header>
     )

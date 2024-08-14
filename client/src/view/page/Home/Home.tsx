@@ -4,7 +4,7 @@ import Book from "../../common/Book/Book";
 import icon from "../../../images/pexels-minan1398-694740.jpg";
 import background from "../../../images/wood-background2.png";
 import book1 from "../../../images/book1.png";
-import book2 from "../../../images/book2.png";
+import bookset from "../../../images/bookset.png";
 import book3 from "../../../images/book3.png";
 import axios from 'axios'
 import {ViewAll} from "../../common/ViewAll/ViewAll";
@@ -55,16 +55,25 @@ export class Home extends Component {
         const {data} = this.state;
         return (
             <div className=" h-auto">
-                <div className=" bg-cover bg-center w-full h-[45vh]" style={{backgroundImage: `url(${background})`}}>
+                <div className=" relative bg-cover bg-center w-full h-[55vh]" style={{backgroundImage: `url(${background})`}}>
                     {/*<img src={background} alt="" className="h-[40vh] w-[100vw]"/>*/}
-                    <img src={book1} alt="" className="h-32"/>
-                    <img src={book2} alt="" className="h-32 relative left-24 bottom-10"/>
-                    <img src={book3} alt="" className="h-32 relative left-48 bottom-16"/>
+                    {/*<img src={book1} alt="" className="h-32"/>*/}
+                    {/*<img src={book2} alt="" className="h-32 relative left-24 bottom-10"/>*/}
+                    <img src={bookset} alt="" className="h-52 absolute right-28 top-16"/>
+
+                    <div className='relative top-20 left-[40vw]'>
+                        <p className='text-[40px] mb-0'>Featured Books in </p>
+                        <p className='text-[50px] mt-0 font-bold relative bottom-4'>August</p>
+                        <p className='text-[30px] text-red-700 relative bottom-5'> 20% off</p>
+                        <p className='text-[30px] relative bottom-5'>Buy Now</p>
+                    </div>
+
+                    {/*<p className='text-lg'>Bookshop.sl is an online bookshop with a mission to financially support local, independent bookshops.</p>*/}
 
                 </div>
 
-                <div className='h-[55vh] bg-white relative '>
-                    <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
+                <div className='h-[55vh] bg-white relative shadow-xl '>
+                <label className='font-bold text-xl relative left-48 top-12'>NOVELS BOOKS</label>
                     <Link to='/view' >
                         <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
                     </Link>
@@ -82,7 +91,7 @@ export class Home extends Component {
                 </div>
 
 
-                <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
+                <div className='w-[100%] h-[55vh] bg-white relative shadow-xl'>
                     <label className='font-bold text-xl relative left-48 top-12'>SCIENCE FICTION BOOKS</label>
                     <Link to='/view' >
                         <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
@@ -98,7 +107,7 @@ export class Home extends Component {
                     </div>
                 </div>
 
-                <div className='w-[100%] h-[55vh] bg-white relative'>
+                <div className='w-[100%] h-[55vh] bg-white relative shadow-xl'>
                     <label className='font-bold text-xl relative left-48 top-12'>FANTASY BOOKS</label>
                     <Link to='/view' >
                         <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>
@@ -114,7 +123,7 @@ export class Home extends Component {
                     </div>
                 </div>
 
-                <div className='w-[100%] h-[55vh] bg-[#f9edee] relative'>
+                <div className='w-[100%] h-[55vh] bg-white relative shadow-xl'>
                     <label className='font-bold text-xl relative left-48 top-12'>DYSTOPIAN BOOKS</label>
                     <Link to='/view' >
                         <button className='font-light text-[14px] relative left-[68vw] top-12' value='novel'>View All</button>

@@ -1,34 +1,47 @@
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
 export const SideBar = () => {
+
+    const api= axios.create({
+        baseURL: `http://localhost:4000`,
+    });
+
+    const [payment,setPayment]=useState()
+
+    useEffect(()=>{
+        fetchData();
+    },[payment]);
+
+    const fetchData = async () => {
+        try {
+            const res = await api.get(`api/v1/payment/getTotal`);
+            setPayment(res.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
     return (
         <Sidebar className="w-25 h-[93.2%] bg-[#f9edee]">
-            {/* <Menu>
-                <SubMenu label="Charts" className="border bg-blue-600">
-                    <MenuItem> Pie charts </MenuItem>
-                    <MenuItem> Line charts </MenuItem>
-                </SubMenu>
-                <MenuItem className="border bg-blue-600"> Documentation </MenuItem>
-                <MenuItem className="border bg-blue-600"> Calendar </MenuItem>
-            </Menu>*/}
 
-            <ul className="flex flex-col ">
+            <div className='w-[80%] h-[20%] shadow-xl mt-10 ml-5'>
+                <p className='text-[30px] text-red-700 relative left-8 top-4'>Today Sales</p>
+                <p className='text-[20px] relative left-16 top-3'>Rs.{payment}/-</p>
+            </div>
 
-                <Link to="/user/" className='w-auto h-12 bg-[#f9edee] shadow-md   mt-1'>
-                    <li className="hidden sm:inline text-black text-lg ml-14 mt-6 hover:underline">Add Book</li>
-                </Link>
+            <div className='w-[80%] h-[20%] shadow-xl mt-10 ml-5'>
+                <p className='text-[30px] text-red-700 relative left-8 top-4'>Today Sales</p>
+                <p className='text-[20px] relative left-16 top-3'></p>
+            </div>
 
-                <Link to="/user/bookDetails" className='w-auto h-12 bg-[#f9edee] shadow-md  mt-1'>
-                    <li className="hidden sm:inline text-black text-lg hover:underline">View Table</li>
-                </Link>
-
-                <Link to="/" className='w-auto h-12 bg-[#f9edee] shadow-md mt-1'>
-                    <li className="hidden sm:inline text-black text-lg hover:underline">Home</li>
-                </Link>
-
-            </ul>
+            <div className='w-[80%] h-[20%] shadow-xl mt-6 ml-5'>
+                <p className='text-[30px] text-red-700 relative left-8 top-4'>Today Sales</p>
+                <p className='text-[20px] relative left-16 top-3'></p>
+            </div>
         </Sidebar>
+
     );
 };
