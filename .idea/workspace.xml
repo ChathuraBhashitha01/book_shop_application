@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c52c6e-8978-4133-949a-1c520431d4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/images/bookset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/view/page/PaymentsDetails/PaymentDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/SideBar/SideBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserContent/UserContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/common/UserNavBar/UserNavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookAddingForm/BookAddingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/BookTableForm/BookTableForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Home/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/controller/PaymentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/controller/PaymentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/routes/PaymentRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/routes/PaymentRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/page/Signup/Signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/view/page/Signup/Signup.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
       <recent name="C:\GDSE 66\react project\book_shop_application\client\src\view\common\SideBar" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Node.js.bin\www">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -160,7 +156,7 @@
       <workItem from="1723475977776" duration="1158000" />
       <workItem from="1723522474827" duration="2824000" />
       <workItem from="1723525381866" duration="7308000" />
-      <workItem from="1723614104585" duration="8582000" />
+      <workItem from="1723614104585" duration="12527000" />
     </task>
     <servers />
   </component>

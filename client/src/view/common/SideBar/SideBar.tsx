@@ -27,7 +27,7 @@ export const SideBar = () => {
     return (
         <Sidebar className="w-25 h-[93.2%] bg-[#f9edee]">
 
-            <div className='w-[80%] h-[20%] shadow-xl mt-10 ml-5'>
+            <div className='w-[80%] h-[20%] shadow-xl mt-20 ml-5'>
                 <p className='text-[30px] text-red-700 relative left-8 top-4'>Today Sales</p>
                 <p className='text-[20px] relative left-16 top-3'>Rs.{payment}/-</p>
             </div>

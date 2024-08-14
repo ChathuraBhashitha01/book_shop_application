@@ -23,12 +23,6 @@ export class Login extends Component {
                                     <Link to="/user">Sign In</Link></button>
 
                             </form>
-                            <div className="flex gap-2 mt-5">
-                                <p>You Want to create account?</p>
-                                <Link to={"/signup"}>
-                                    <span className="text-blue-700">Sign up</span>
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 </div>
